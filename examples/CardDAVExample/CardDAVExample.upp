@@ -1,0 +1,12 @@
+uses
+	Core,
+	CardDAV;
+
+file
+	CardDAVExample.h,
+	CardDAVExample.cpp,
+	CardDAVHelpers.cpp;
+
+mainconfig
+	"" = "";
+

@@ -1,0 +1,13 @@
+description "CardDAV client-side library for U++\377";
+
+uses
+	WebDAV;
+
+file
+	CardDAV.h,
+	CardDAV.cpp,
+	Docs readonly separator,
+	src.tpp,
+	Info readonly separator,
+	Copying;
+
