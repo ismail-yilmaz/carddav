@@ -12,7 +12,7 @@ public:
 	virtual ~CardDAVRequest();
 	
 	// Non-blocking initializers (use with Do() method)
-	void    StartGetCurrentUserPrincipal();
+	void    StartGetCurrentUserPrincipal(const String& path = Null);
 	void    StartGetAddressBookHomeSet(const String& path);
 	void    StartGetAddressBooks(const String& path);
 	void    StartGetContacts(const String& path, const String& filter = Null);
@@ -23,7 +23,7 @@ public:
 	void    StartGetContact(const String& path);
 	
 	// Blocking variants
-	String  GetCurrentUserPrincipal();
+	String  GetCurrentUserPrincipal(const String& path = Null);
 	String  GetAddressBookHomeSet(const String& path);
 	String  GetAddressBooks(const String& path);
 	String  GetContacts(const String& path, const String& filter = Null);

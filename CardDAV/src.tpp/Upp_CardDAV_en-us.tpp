@@ -41,11 +41,13 @@ sSuccess()] after completion to verify the operation succeeded.&]
 [s3; &]
 [s4; &]
 [s5;:Upp`:`:CardDAVRequest`:`:StartGetCurrentUserPrincipal`(`): [@(0.0.255) void] 
-[* StartGetCurrentUserPrincipal]()&]
-[s2;%% Starts discovery of the current user`'s principal URL. This 
-is typically the first step in CardDAV discovery to determine 
-the authenticated user`'s principal resource path. Returns raw 
-XML response that client must parse.&]
+[* StartGetCurrentUserPrincipal]([@(0.0.255) const] String[@(0.0.255) `&] 
+[*@3 path] [@(0.0.255) `=] Null)&]
+[s2;%% Starts discovery of the current user`'s principal URL. [%-*@3 path] 
+can be used to specify the path. This is typically the first 
+step in CardDAV discovery to determine the authenticated user`'s 
+principal resource path. Returns raw XML response that client 
+must parse.&]
 [s3; &]
 [s4; &]
 [s5;:Upp`:`:CardDAVRequest`:`:StartGetAddressBookHomeSet`(const String`&`): [@(0.0.255) v
@@ -128,10 +130,12 @@ completes.&]
 [s3; &]
 [s4; &]
 [s5;:Upp`:`:CardDAVRequest`:`:GetCurrentUserPrincipal`(`): String 
-[* GetCurrentUserPrincipal]()&]
-[s2;%% Discovers the current user`'s principal URL. Returns raw XML 
-response containing the principal resource path which is used 
-for subsequent addressbook discovery. Client must parse the XML.&]
+[* GetCurrentUserPrincipal]([@(0.0.255) const] String[@(0.0.255) `&] 
+[*@3 path] [@(0.0.255) `=] Null)&]
+[s2;%% Discovers the current user`'s principal URL.  [%-*@3 path] can 
+be used to specify the path. Returns raw XML response containing 
+the principal resource path which is used for subsequent addressbook 
+discovery. Client must parse the XML.&]
 [s3; &]
 [s4; &]
 [s5;:Upp`:`:CardDAVRequest`:`:GetAddressBookHomeSet`(const String`&`): String 

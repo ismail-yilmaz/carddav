@@ -88,9 +88,9 @@ CardDAVRequest::~CardDAVRequest()
 {
 }
 
-void CardDAVRequest::StartGetCurrentUserPrincipal()
+void CardDAVRequest::StartGetCurrentUserPrincipal(const String& path)
 {
-	StartPropFind("/", 0, sPrincipalQuery);
+	StartPropFind(Nvl(path, "/"), 0, sPrincipalQuery);
 }
 
 void CardDAVRequest::StartGetAddressBookHomeSet(const String& path)
@@ -137,9 +137,9 @@ void CardDAVRequest::StartGetContact(const String& path)
 	StartLoadFile(path);
 }
 
-String CardDAVRequest::GetCurrentUserPrincipal()
+String CardDAVRequest::GetCurrentUserPrincipal(const String& path)
 {
-	StartGetCurrentUserPrincipal();
+	StartGetCurrentUserPrincipal(path);
 	return Execute();
 }
 
